@@ -1,0 +1,78 @@
+[Tue Aug 27 04:20:07.936402 2019] [suexec:notice] [pid 27699:tid 139897225930944] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Aug 27 04:20:07.950753 2019] [lbmethod_heartbeat:notice] [pid 27699:tid 139897225930944] AH02282: No slotmem from mod_heartmonitor
+[Tue Aug 27 04:20:07.951212 2019] [http2:warn] [pid 27699:tid 139897225930944] AH02951: mod_ssl does not seem to be enabled
+[Tue Aug 27 04:20:07.951322 2019] [:warn] [pid 27699:tid 139897225930944] mod_wsgi: Compiled for Python/2.7.14.
+[Tue Aug 27 04:20:07.951329 2019] [:warn] [pid 27699:tid 139897225930944] mod_wsgi: Runtime using Python/2.7.16.
+[Tue Aug 27 04:20:07.955787 2019] [mpm_event:notice] [pid 27699:tid 139897225930944] AH00489: Apache/2.4.39 () mod_wsgi/3.4 Python/2.7.16 configured -- resuming normal operations
+[Tue Aug 27 04:20:07.955808 2019] [core:notice] [pid 27699:tid 139897225930944] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = request.args['symbol'] 
+NameError: name 'request' is not defined
+[Tue Aug 27 04:20:21.462625 2019] [cgid:error] [pid 27703:tid 139896626403072] [client 108.210.66.3:57755] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:20:47.685953 2019] [cgid:error] [pid 27703:tid 139896538785536] [client 108.210.66.3:57774] End of script output before headers: scrape-street-insider.py
+[Tue Aug 27 04:26:48.715497 2019] [cgid:error] [pid 27703:tid 139896513607424] [client 108.210.66.3:58171] AH01264: script not found or unable to stat: /var/www/html/pythonscrape/scape-street-insider.py
+[Tue Aug 27 04:26:52.727267 2019] [autoindex:error] [pid 27703:tid 139896505214720] [client 209.17.96.170:59311] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:26:54.550945 2019] [cgid:error] [pid 27701:tid 139896438073088] [client 108.210.66.3:58174] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:27:01.790441 2019] [cgid:error] [pid 27703:tid 139896471643904] [client 108.210.66.3:58178] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:27:14.572440 2019] [cgid:error] [pid 27703:tid 139896454858496] [client 173.252.87.28:46826] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:27:14.887409 2019] [cgid:error] [pid 27702:tid 139896320673536] [client 173.252.87.22:40336] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:27:15.350560 2019] [cgid:error] [pid 27703:tid 139896438073088] [client 173.252.87.37:45310] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:27:15.914404 2019] [cgid:error] [pid 28313:tid 139896513607424] [client 173.252.87.34:46610] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 54, in <module>
+    symbol = requests.args['symbol'] 
+AttributeError: module 'requests' has no attribute 'args'
+[Tue Aug 27 04:27:28.505732 2019] [cgid:error] [pid 28313:tid 139896496822016] [client 173.252.127.42:35826] End of script output before headers: scrape-street-insider.py
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 11, in <module>
+    from cherrypy import request
+ModuleNotFoundError: No module named 'cherrypy'
+[Tue Aug 27 04:29:47.977169 2019] [cgid:error] [pid 28313:tid 139896522000128] [client 108.210.66.3:58266] End of script output before headers: scrape-street-insider.py
+[Tue Aug 27 04:38:02.445781 2019] [proxy_fcgi:error] [pid 28313:tid 139896471643904] [client 108.210.66.3:58389] AH01071: Got error 'Primary script unknown\n'
+[Tue Aug 27 04:50:35.315370 2019] [autoindex:error] [pid 27703:tid 139896421287680] [client 162.251.158.238:42774] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 60, in <module>
+    symbol = sys.argv[1] 
+IndexError: list index out of range
+[Tue Aug 27 04:57:08.021677 2019] [cgid:error] [pid 28313:tid 139896412894976] [client 108.210.66.3:58963] End of script output before headers: scrape-street-insider.py
+[Tue Aug 27 06:53:42.149669 2019] [autoindex:error] [pid 28313:tid 139896354146048] [client 47.89.192.12:39498] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Aug 27 08:37:37.254021 2019] [autoindex:error] [pid 28313:tid 139896547178240] [client 35.241.176.153:38100] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Aug 27 08:42:50.156113 2019] [autoindex:error] [pid 28313:tid 139896513607424] [client 41.143.244.83:59195] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+Traceback (most recent call last):
+  File "/var/www/html/pythonscrape/scrape-street-insider.py", line 60, in <module>
+    symbol = sys.argv[1] 
+IndexError: list index out of range
+[Tue Aug 27 10:20:37.564321 2019] [cgid:error] [pid 27703:tid 139896404502272] [client 108.210.66.3:63595] End of script output before headers: scrape-street-insider.py
+[Tue Aug 27 12:04:47.819645 2019] [autoindex:error] [pid 27702:tid 139896161212160] [client 187.57.66.244:33718] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Aug 27 12:04:47.819709 2019] [autoindex:error] [pid 27703:tid 139896547178240] [client 187.57.66.244:33717] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Aug 27 12:08:13.785713 2019] [proxy_fcgi:error] [pid 28313:tid 139896496822016] (70007)The timeout specified has expired: [client 172.31.90.218:57824] AH01075: Error dispatching request to : (polling)
+[Tue Aug 27 12:08:08.075493 2019] [proxy_fcgi:error] [pid 27701:tid 139896522000128] (70007)The timeout specified has expired: [client 108.210.66.3:51263] AH01075: Error dispatching request to : (polling), referer: http://ec2-54-210-42-143.compute-1.amazonaws.com/newscheck/
