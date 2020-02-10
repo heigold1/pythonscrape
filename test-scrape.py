@@ -8,6 +8,7 @@ import argparse
 from random import randint
 import urllib3
 import sys 
+from pprint import pprint 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -19,24 +20,21 @@ def parse_finance_page(symbol):
           "Accept-Encoding":"gzip, deflate",
           "Accept-Language":"en-GB,en;q=0.9,en-US;q=0.8,ml;q=0.7",
           "Connection":"keep-alive",
-#          "Host":"api.github.com",
-#          "Referer":"https://api.github.com",
-          "Host":"www.streetinsider.com",
-          "Referer":"https://www.streetinsider.com",
-
-          "Upgrade-Insecure-Requests":"1",
+          "host":"www.etrade.wallst.com",
+          "referer":"http://www.etrade.wallst.com",
+          "upgrade-insecure-Requests":"1",
           "User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"
     } 
 
-
   print("Content-type: text/html\n\n")
-#  print("Content-type: text/html\n\n")
 
   for retries in range(1):
     try:    
 
-#      url = "https://api.github.com/events"
-      url = "https://www.streetinsider.com/stock_lookup.php?LookUp=Get+Quote&q=" + symbol
+#      url = "https://www.streetinsider.com/stock_lookup.php?LookUp=Get+Quote&q=" + symbol
+      url = "http://www.etrade.wallst.com/v1/stocks/news/search_results.asp?symbol=CREG"
+#      url = "https://us.etrade.com/home"
+
 
       response = requests.get(url, headers = headers, verify=False)
 
@@ -47,8 +45,9 @@ def parse_finance_page(symbol):
 
       parser = html.fromstring(response.text)
 
-
-      print(response.text) 
+      pprint(response.status_code)
+      pprint(response.text)  
+     # print(response.text) 
 
 
     except Exception as e:

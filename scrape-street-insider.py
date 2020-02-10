@@ -47,7 +47,7 @@ def parse_finance_page(symbol):
 #      print("randomFloat is " + str(randomFloat)) 
 #      sys.exit() 
 
-      sleep(randint(1,2,3) + random.random())
+      sleep(randint(1,3) + random.random())
 
       parser = html.fromstring(response.text)
 
