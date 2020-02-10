@@ -8,8 +8,8 @@ import argparse
 from random import randint
 import urllib3
 import sys 
+import json
 import re 
-import random 
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -22,9 +22,8 @@ def parse_finance_page(symbol):
           "Accept-Encoding":"gzip, deflate",
           "Accept-Language":"en-GB,en;q=0.9,en-US;q=0.8,ml;q=0.7",
           "Connection":"keep-alive",
-          "Host":"www.streetinsider.com",
-          "Referer":"https://www.streetinsider.com",
-
+          "Host":"finance.yahoo.com",
+          "Referer":"https://finance.yahoo.com",
           "Upgrade-Insecure-Requests":"1",
           "User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"
     } 
@@ -35,33 +34,21 @@ def parse_finance_page(symbol):
   for retries in range(1):
     try:    
 
-      url = "https://www.streetinsider.com/stock_lookup.php?LookUp=Get+Quote&q=" + symbol
+      url = "https://finance.yahoo.com/quote/" + symbol + "/profile?p=" + symbol + '&.tsrc=fin-srch' 
 
       response = requests.get(url, headers = headers, verify=False)
 
       if response.status_code!=200:
-        raise ValueError("Invalid Response Received From Webserver")
+        returnJsonData['address'] = 'COMPANY NOT FOUND'
+        returnJsonData['website'] = 'COMPANY NOT FOUND'
+        returnJsonData['sector'] = 'COMPANY NOT FOUND'
+        returnJsonData['industry'] = 'COMPANY NOT FOUND'
 
+        jsonData = json.dumps(returnJsonData)
+        print(jsonData)
 
-#      randomFloat = randint(1,2) + random.random()
-#      print("randomFloat is " + str(randomFloat)) 
-#      sys.exit() 
+      parser = html.fromstring(response.content)
 
-      sleep(randint(1,3) + random.random())
-
-      parser = html.fromstring(response.text)
-
-      responseText = response.text
-
-#      print(responseText) 
-
-      responseText = re.sub(r"\$jq\('#blocker'\).fadeIn\(500\);", "console.log('nothing')", responseText)  
-
-      print(responseText) 
-
-
-    except Exception as e:
-      print("Failed to process the request, Exception:%s"%(e))
 
 symbol = sys.argv[1] 
 
