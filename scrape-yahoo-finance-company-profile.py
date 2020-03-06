@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 from lxml import html
 import requests
 from time import sleep
