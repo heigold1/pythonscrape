@@ -49,9 +49,9 @@ def parse_finance_page(symbol):
 
       sleep(randint(1,3) + random.random())
 
-      parser = html.fromstring(response.text)
+      #parser = html.fromstring(response.text)
 
-      responseText = response.text
+      responseText = response.text.encode('utf-8') 
 
 #      print(responseText) 
 
